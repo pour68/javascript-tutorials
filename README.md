@@ -600,6 +600,13 @@ reduceRight(): Reduce the values of an array to a single value (going right-to-l
 
 ---
 
+## Json
+
+- serialize
+- deserialize
+
+---
+
 ## Function
 
 const square = (width) => width * width;
@@ -714,13 +721,6 @@ values(): Returns an iterator object of the values in a Map
 
 ---
 
-## Json
-
-- serialize
-- deserialize
-
----
-
 ## Promise
 
 ---
@@ -729,7 +729,7 @@ values(): Returns an iterator object of the values in a Map
 
 ---
 
-## fetch (get - post - put - delete)
+## Fetch (get - post - put - delete)
 
 ---
 
@@ -755,4 +755,4 @@ undefined - null - "" - 0 - NaN - false
 
 ### Strict mode
 
-### Bubbling
+### Capturing & bubbling

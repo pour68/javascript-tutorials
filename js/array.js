@@ -50,29 +50,43 @@ fruits.fruitsCount;
 // methods
 
 // crud
-fruits.push("sourcherry");
-fruits.pop();
 
+// create
+fruits.push("sourcherry");
 fruits.unshift("banana");
+
+// read
+for (const fruit of fruits) {
+  console.log(fruit);
+}
+
+for (const mark of marks) {
+  console.log(mark);
+}
+
+// update
+fruits.splice(1, 2, "watermelon", "melon", "papaya", "dragon");
+
+// delete
+fruits.pop();
 fruits.shift();
 
 // sorting
-const sortedFruits = fruits.sort();
-const reverseFruits = fruits.reverse();
 
 // asc
-const ascSortedFruits = fruits.sort((a, b) => a - b);
+const sortedFruits = fruits.sort();
+const ascSortedMarks = marks.sort((a, b) => a - b);
 
 // desc
-const descSortedFruits = fruits.sort((a, b) => b - a);
+const reverseFruits = fruits.reverse();
+const descSortedMarks = marks.sort((a, b) => b - a);
 
-// cut and join
-fruits.slice(2, 4);
-fruits.splice(0, 1);
-fruits.splice(1, 2, "watermelon", "melon", "papaya", "dragon");
+// cut, concat and join
+const partOfFruits = fruits.slice(2, 4);
 
 const fruitsAndMarks = fruits.concat(marks);
 const fruitsAndMarksAndMix = fruits.concat(marks, mix);
+
 const fruitsJoinedByDash = fruits.join("-");
 
 // search by index
@@ -91,3 +105,33 @@ let arrayOfDoubles = Array.from([1, 2, 3], (x) => x * 2);
 let arrayOfCharacters = Array.from("Pouria");
 
 // high order methods
+
+fruits.forEach((fruit) => {
+  console.log(fruit);
+});
+
+const halfOfMarks = marks.map((mark) => mark / 2);
+
+const richUsers = users.filter((user) => user.balance > 1_000_000);
+
+const rashidAminiUser = users.find((user) => user.userId === 1);
+
+const IndexOf20InMarks = marks.findIndex((mark) => mark === 20);
+
+const is20MarkExist = marks.includes(20);
+const isAllValuesPositive = marks.every((mark) => mark > 0);
+const hasAtLeastOne20 = marks.some((mark) => mark === 20);
+
+const fillArray = fruits.fill("value", 0, fruits.length);
+
+const sum = marks.reduce((mark, total) => {
+  total += mark;
+
+  return total;
+}, 0);
+
+const total = marks.reduceRight((mark, total) => {
+  total += mark;
+
+  return total;
+}, 0);
