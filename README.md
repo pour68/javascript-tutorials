@@ -619,9 +619,9 @@ const square = (width) => width * width;
 - anonymous
 - arrow
 - auto-invoked
-- constructor
-- factory
 - recursive
+- factory
+- constructor
 - generator
 
 ---
@@ -637,9 +637,25 @@ prototype: return object
 
 call() - apply() - bind()
 
+call: With the call() method, you can write a method that can be used on different objects.
+bind: function borrowing
+
+---
+
+## function closure
+
+A closure is a function having access to the parent scope, even after the parent function has closed.
+
+const add = (function () {
+  let counter = 0;
+  return function () {counter += 1; return counter;}
+})();
+
 ---
 
 ## Set
+
+A JavaScript Set is a collection of unique values.
 
 let set = new Set([1,2,2,3]);
 
@@ -667,6 +683,8 @@ entries(): Returns an Iterator with the [value,value] pairs from a Set
 
 ## Map
 
+A Map holds key-value pairs where the keys can be any datatype, a Map remembers the original insertion order of the keys.
+
 let map = new Map([["apples", 500], ... ]);
 
 ---
@@ -693,6 +711,8 @@ values(): Returns an iterator object of the values in a Map
 ---
 
 ## Class
+
+class is blueprint of an object.
 
 - constructor
 - field
