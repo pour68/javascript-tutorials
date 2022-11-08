@@ -43,7 +43,7 @@ for (const value of Object.values(employee)) {
   console.log(value);
 }
 
-// loop through each value
+// loop through each property
 for (const property in employee) {
   console.log(property);
 }

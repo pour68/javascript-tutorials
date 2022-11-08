@@ -575,11 +575,11 @@ valueOf(): Returns the primitive value of an array
 
 ### High order array methods
 
-forEach(): Calls a function for each array element
-map(): Creates a new array with the result of calling a function for each array element
-filter(): Creates a new array with every element in an array that pass a test
-find(): Returns the value of the first element in an array that pass a test
-findIndex(): Returns the index of the first element in an array that pass a test
+forEach(value, index, array): Calls a function for each array element
+map(value, index, array): Creates a new array with the result of calling a function for each array element
+filter(value, index, array): Creates a new array with every element in an array that pass a test
+find(value, index, array): Returns the value of the first element in an array that pass a test
+findIndex(value, index, array): Returns the index of the first element in an array that pass a test
 includes(): Check if an array contains the specified element
 every(): Checks if every element in an array pass a test
 some(): Checks if any of the elements in an array pass a test
@@ -731,21 +731,74 @@ class is blueprint of an object.
 
 ## BOM
 
+### window
+
+window.innerWidth: the inner height of the browser window
+window.innerHeight: the inner width of the browser window
+window.open()
+window.close()
+window.moveTo()
+window.resizeTo()
+
+### screen
+
+screen.width: the width of the visitor's screen
+screen.height: the height of the visitor's screen
+screen.availWidth: the width of the visitor's screen, in pixels, minus interface features like the Windows Taskbar
+screen.availHeight: the height of the visitor's screen, in pixels, minus interface features like the Windows Taskbar
+screen.colorDepth: the number of bits used to display one color
+screen.pixelDepth: the pixel depth of the screen.
+
+Note: All modern computers use 24 bit or 32 bit hardware for color resolution:
+
+24 bits = 16,777,216 different "True Colors"
+32 bits = 4,294,967,296 different "Deep Colors"
+
+Note: For modern computers, Color Depth and Pixel Depth are equal.
+
+## location
+
+window.location.href: the href (URL) of the current page
+window.location.hostname: the domain name of the web host
+window.location.pathname: the path and filename of the current page
+window.location.protocol: the web protocol used (http: or https:)
+window.location.assign(): loads a new document
+
+Note: Most browsers will not display default port numbers (80 for http and 443 for https).
+
+### history
+
+history.back(): same as clicking back in the browser
+history.forward(): same as clicking forward in the browser
+
+### navigator
+
+navigator.cookieEnabled
+navigator.platform
+navigator.language
+navigator.online
+navigator.javaEnabled()
+
+### popup window
+
+window.alert(msg);
+window.confirm(msg);
+window.prompt(msg, initialValue);
+
+### Timing
+
+setTimeout(callback, time);
+setInterval(callback, time);
+
 ---
 
 ## Cookie
 
+document.cookie = "username=John Smith; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+
 ---
 
 ## Local Storage
-
----
-
-## Promise
-
----
-
-## Async and Await
 
 ---
 

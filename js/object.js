@@ -14,6 +14,7 @@ person["firstName"];
 
 // set
 person.id = 35;
+person.phoneNumber = "021";
 
 // props
 Object.constructor;
@@ -56,26 +57,26 @@ Object.defineProperties(person, {
   },
 });
 
-const descriptor = Object.getOwnPropertyDescriptor(person, "firstName");
-descriptor.value;
-descriptor.writable;
-descriptor.configurable;
-descriptor.enumerable;
+// const descriptor = Object.getOwnPropertyDescriptor(person, "firstName");
+// descriptor.value;
+// descriptor.writable;
+// descriptor.configurable;
+// descriptor.enumerable;
 
-const descriptors = Object.getOwnPropertyDescriptors(person);
-descriptors.phoneNumber.configurable;
+// const descriptors = Object.getOwnPropertyDescriptors(person);
+// descriptors.phoneNumber.configurable;
 
-const keys = Object.getOwnPropertyNames(person);
-const symbolKeys = Object.getOwnPropertySymbols(person);
+// const keys = Object.getOwnPropertyNames(person);
+// const symbolKeys = Object.getOwnPropertySymbols(person);
 
-const prototype = Object.getPrototypeOf(person);
+// const prototype = Object.getPrototypeOf(person);
 
-Object.preventExtensions(person);
-Object.seal(person);
-Object.freeze(person);
+// Object.preventExtensions(person);
+// Object.seal(person);
+// Object.freeze(person);
 
-Object.isExtensible(person);
-Object.isSealed(person);
-Object.isFrozen(person);
+// Object.isExtensible(person);
+// Object.isSealed(person);
+// Object.isFrozen(person);
 
 // object constructor (constructor function)
