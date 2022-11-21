@@ -12,7 +12,7 @@ let hasCrime = false;
 if (balance > 1_000_000 && !hasCrime) {
   // eligible for loan
 } else {
-  // not elgible for loand
+  // not elgible for loan
 }
 
 let price = 50_000;
@@ -36,6 +36,57 @@ switch (accountType) {
 
 const finalPrice = price - off;
 
+// let baseSalary;
+// let position = "Programer";
+// let overTime = 10;
+// let payPerHour = 25;
+
+// switch (position) {
+//   case "CEO":
+//     baseSalary = 100_000;
+//     break;
+//   case "Manager":
+//     baseSalary = 50_000;
+//     break;
+//   case "Programer":
+//     baseSalary = 25_000;
+//     break;
+//   case "Employee":
+//     baseSalary = 10_000;
+//     break;
+//   default:
+//     baseSalary = 5_000;
+//     break;
+// }
+
+// let finalPayment = baseSalary + overTime * payPerHour;
+
+// let dice = 6;
+// let movement;
+
+// switch (dice) {
+//   case 1:
+//     movement = 1;
+//     break;
+//   case 2:
+//     movement = 2;
+//     break;
+//   case 3:
+//     movement = 3;
+//     break;
+//   case 4:
+//     movement = 4;
+//     break;
+//   case 5:
+//     movement = 5;
+//     break;
+//   case 6:
+//     movement = 6;
+//     break;
+//   default:
+//     break;
+// }
+
 // loops
 
 // for (initializer; condition; iterator) {}
@@ -58,18 +109,19 @@ const finalPrice = price - off;
 
 // boolean props and methods
 
+// object literal
 let isSummer = true;
 
 // let isSummer = new Boolean(true);
 // console.log(isSummer.valueOf());
 
-isSummer.toString();
+// isSummer.toString();
 
 // number props and methods
 let iphonePrice = 999.99;
 
-// let price = new Number(999.99);
-// price.valueOf();
+// let iphonePrice = new Number(999.99);
+// iphonePrice.valueOf();
 
 iphonePrice.toFixed(2);
 iphonePrice.toPrecision(5);
@@ -101,22 +153,23 @@ let height = 2;
 // width **= 2;
 
 // comparison (> >= < <= == === != !==)
-// let age = 20;
-// if (age > 18) {
-//   // adult content
-// } else {
-//   // teenager content
-// }
+let age = 20;
+if (age > 18) {
+  // adult content
+} else {
+  // teenager content
+}
 
 // logical (! && ||)
 // let isFemale = false;
 // let isApproved = isFemale || age >= 18;
 
 // // bitwise (& | ^ ~ << >> >>>)
-// let number = 5;
-// let value = 1;
+let number = 5;
+let value = 1;
 
 // string props and methods
+//               012345678
 let statement = "Aria is a programmer.";
 
 // props
@@ -130,12 +183,11 @@ statement.length;
 // statement.indexOf("is"); // 5
 // statement.substring(0, 7); // Aria is
 // statement.slice(8); // a programmer.
-// statement.substring(0, 7); // Aria is
 // statement.concat(" and also a great person"); // Aria is a programmer. and also a great person
 // statement.includes("Aria"); // true
 // statement.startsWith("Aria"); // true
 // statement.endsWith("programmer."); // true
-// statement.search("is");
+// statement.search("is"); // 5
 // statement.charCodeAt(1);
 
 // let fullName = "   aria zamani    ";

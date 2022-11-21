@@ -1,3 +1,6 @@
+// variable pattern
+/* var/let/const variableName = value; */
+
 // number
 
 // integer
@@ -24,6 +27,15 @@ let lightSpeed = 3e5; // 3x10^5
 let weight = 1.4e4; // 14000
 let gravityForce = 9.8; // 9.8
 
+// boolean
+let isMale = true;
+let isAdult = false;
+let hasLicense = true;
+let hasDrivingLicense = true;
+let isConfirmed = false;
+let isExpert = true;
+let hasSister = true;
+
 // string
 let address = "Iran, Tehran, Shariati st., Moallem st.";
 let fullName = "Pouria Nayeb";
@@ -40,17 +52,9 @@ let natinality = "Iranian";
 let statement = 'It\'s seems you are a "programmer"';
 let digitalCoin = "XRP";
 let phrase = "my name is " + fullName + " and I'm a " + job + " and teacher.";
+let environmentVariable = "production";
 
 const ISBN = "124512545554454";
-
-// boolean
-let isMale = true;
-let isAdult = false;
-let hasLicense = true;
-let hasDrivingLicense = true;
-let isConfirmed = false;
-let isExpert = true;
-let hasSister = true;
 
 // null
 let ariaBrother = null;
@@ -59,8 +63,8 @@ let ariaBrother = null;
 let myCat = undefined;
 
 // symbol
-const description = "aria-id";
-let ariaId = Symbol(description);
+// const description = "aria-id";
+let ariaId = Symbol("aria-id");
 
 // object: key/value collection of related data
 let person = {
@@ -71,6 +75,7 @@ let person = {
   eyeColor: "Brown",
   walk: function () {},
   eat: function () {},
+  talk: function () {},
 };
 
 let employee = {
@@ -104,7 +109,12 @@ let table = {
 };
 
 // array: collection of data
-let students = ["mohammad darabi", "aria zamani", "nava mohammadi"];
+let students = [
+  "mohammad darabi",
+  "aria zamani",
+  "nava mohammadi",
+  "shahab godarzi",
+];
 let carBrands = ["BMW", "Benz", "Porche", "TOYOTA"];
 
 let grades = [10, 12.5, 14.75, 18, 20];
