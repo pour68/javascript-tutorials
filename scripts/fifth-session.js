@@ -26,8 +26,8 @@ let port = location.port; // 5500
 
 let isCookieEnable = navigator.cookieEnabled; //
 let deviceOS = navigator.platform; //
-let browserLanguage = navigator.language; //
-let isUserOnline = navigator.online; // true
+let browserLanguage = navigator.language; // en-US
+let isBrowserOnline = navigator.onLine; // true
 
 // DOM
 console.dir(document);
@@ -44,3 +44,69 @@ document.body;
 document.forms;
 document.links;
 document.images;
+
+console.log(document.images);
+
+// old
+const demoDiv = document.getElementById("demo");
+const containerDivs = document.getElementsByClassName("container");
+const marks = document.getElementsByTagName("mark");
+const queryInput = document.getElementsByName("query")[0];
+
+// modern
+const demo = document.querySelector("#demo");
+const containers = document.querySelectorAll(".container");
+const markElements = document.querySelectorAll("mark");
+const ourQueryInput = document.querySelector("input[name=query]");
+
+// select element
+const userInfoDiv = document.querySelector("#user-info");
+
+/* 
+  display object data
+*/
+
+// data
+const user = {
+  image: "male.png",
+  fullName: "Pouria Nayeb",
+  job: "Author and programmer",
+};
+const { image, fullName, job } = user;
+
+// import html by dynamic data
+userInfoDiv.innerHTML = `
+    <img src="img/${image}" alt="${fullName}" />
+    <h1>${fullName}</h1>
+    <h3>${job}</h3>
+`;
+
+/* 
+  display array data
+*/
+
+// select element
+const usersUl = document.querySelector("#users");
+
+const users = ["aria zamani", "nava mohammadi", "mehdi eskandari"];
+let container = "";
+
+// method 1
+// users.forEach(user => {
+//     container += `<li>${user}</li>`;
+// });
+
+// 1: <li>aria zamani</li>
+// 2: <li>aria zamani</li><li>nava mohammadi</li>
+// 3: <li>aria zamani</li><li>nava mohammadi</li><li>mehdi eskandari</li>
+
+// usersUl.innerHTML = container;
+
+// method 2
+users.forEach((user) => {
+  let li = document.createElement("li"); // <li></li>
+  let fullName = document.createTextNode(user); // aria zamani
+  li.appendChild(fullName); // <li>aria zamani</li>
+
+  usersUl.appendChild(li);
+});

@@ -83,15 +83,15 @@ function Employee(fullName, position, registerDate) {
 const Aria = new Employee("aria zamani", "Consultant", new Date(2001, 10, 02));
 
 // Class
-// class PersianDate {
-//   constructor() {
-//     this.currentDate = new Date();
-//   }
+class PersianDate {
+  constructor() {
+    this.currentDate = new Date();
+  }
 
-//   get() {
-//     return this.currentDate.toLocaleDateString("fa-IR");
-//   }
-// }
+  get() {
+    return this.currentDate.toLocaleDateString("fa-IR");
+  }
+}
 
 // let pd = new PersianDate();
 // pd.get();
