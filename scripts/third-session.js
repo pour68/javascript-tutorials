@@ -1,4 +1,4 @@
-let people = [
+let peopleArray = [
   {
     id: 1,
     fullName: "Pouria Nayeb",
@@ -19,30 +19,35 @@ let people = [
   },
 ];
 
-// people.forEach((item, index, array) => console.log(item.fullName, index));
-
-// let peopleBalances = people.map((item, index, array) => item.balance);
-
-// let peopleWithHighPayment = people.filter((item) => item.balance > 50_000);
-// let peopleWhoGraduate = people.filter((item) => item.isGraduated);
-// let peopleWithStartCharAria = people.filter((item) =>
-//   item.fullName.startsWith("Aria")
+// peopleArray.forEach((person, index, array) =>
+//   console.log(person.fullName, index)
 // );
 
-// let person = people.find((item) => item.id === 2);
+// let peopleBalances = peopleArray.map((person, index, array) => person.balance);
+// output: [100000, 17600, 75000]
 
-// let personIndex = people.findIndex((item) => item.id === 2);
+// let peopleWithHighPayment = peopleArray.filter(
+//   (person, index, array) => person.balance > 50_000
+// );
+// let peopleWhoGraduate = peopleArray.filter((person) => person.isGraduated);
+// let peopleWithStartValueAria = peopleArray.filter((person) =>
+//   person.fullName.startsWith("Aria")
+// );
 
-// let peopleFullNames = people.map((item, index, array) => item.fullName);
-// let isExistInPeopleCollection = peopleFullNames.includes("Aria Khodarahmi");
+// let person = peopleArray.find((person) => person.id === 2);
 
-// let isAtLeastOneGraduated = people.some((item) => item.isGraduated);
-// let isAllGraduated = people.every((item) => item.isGraduated);
+// let personIndex = peopleArray.findIndex((person) => person.id === 2);
 
-// let fillPeople = people.fill("aria");
+// let peopleFullNames = peopleArray.map((person) => person.fullName); // ["", "", ""]
+// let isExistInPeopleArray = peopleFullNames.includes("Aria Khodarahmi");
 
-// let totalBalance = people.reduce((total, item) => item.balance + total, 0);
-// let totalBalanceFromRight = people.reduceRight(
+// let isAtLeastOneGraduated = peopleArray.some((person) => person.isGraduated);
+// let isAllGraduated = peopleArray.every((person) => person.isGraduated);
+
+// let fillPeople = peopleArray.fill("aria");
+
+// let totalBalance = peopleArray.reduce((total, item) => item.balance + total, 0);
+// let totalBalanceFromRight = peopleArray.reduceRight(
 //   (total, item) => item.balance + total,
 //   0
 // );
@@ -73,21 +78,21 @@ let people = [
 // object => json
 let employee = {
   fullName: "pouria nayeb",
-  salary: 25_000,
+  baseSalary: 25_000,
   overTime: 10,
   payPerHour: 25,
   gender: "male",
   birthDate: new Date(1989, 05, 20),
   getSalary: function () {
-    return this.salary + this.overTime * this.payPerHour;
+    return this.baseSalary + this.overTime * this.payPerHour;
   },
 };
 
 // let employeeJSON = JSON.stringify(employee);
-let peopleJsonCollection = JSON.stringify(people);
+let peopleJsonCollection = JSON.stringify(peopleArray);
 
 // json => object
-// let peopleArray = JSON.parse(peopleJsonCollection);
+let peopleCollection = JSON.parse(peopleJsonCollection);
 
 // storage
 

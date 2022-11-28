@@ -203,37 +203,38 @@ let carBrands = ["BMW", "Benz", "Porche", "TOYOTA"];
 // carBrands[1];
 
 // set
-// carBrands[2] = "Aria";
+// carBrands[2] = "KIA";
 
 // for (let i = 0; i < carBrands.length; i++) {
 //   console.log(carBrands[i]);
 // }
 
 // business class
-// carBrands.forEach((item) => console.log(item));
+// carBrands.forEach((value) => console.log(value));
 
 // props
 carBrands.length; // 4
 
 // methods
-carBrands.push("Ferrari");
-carBrands.pop();
+// carBrands.push("Ferrari");
+// carBrands.pop();
 
-carBrands.unshift("Lamborgini");
-carBrands.shift();
+// carBrands.unshift("Lamborgini");
+// carBrands.shift();
 
-// carBrands.concat(["Alpha Romeo", "Hundai"]);
+// const cars = carBrands.concat(["Alpha Romeo", "Hundai"]);
+// output: ["BMW", "Benz", "Porche", "TOYOTA", "Alpha Romeo", "Hundai"]
 
 carBrands.indexOf("Porche");
-carBrands.join("-");
-carBrands.slice(0, 2); // ["BMW", "Benz"]
-// carBrands.splice(2, 1); // ["BMW", "Benz", "TOYOTA"];
+carBrands.join("-"); // BMW-Benz-Porche-TOYOTA
+const germanCars = carBrands.slice(0, 2); // ["BMW", "Benz"]
+const remainingCars = carBrands.splice(2, 1); // ["BMW", "Benz", "TOYOTA"];
 
 carBrands.includes("Benz"); // true
 
-Array.from(carBrands.entries()); // [[0, 'BMW'], [1, 'Benz'], [2, 'Porche'], [3, 'TOYOTA']]
 Array.from(carBrands.keys()); // [0, 1, 2, 3]
 Array.from(carBrands.values()); // ['BMW', 'Benz', 'Porche', 'TOYOTA']
+Array.from(carBrands.entries()); // [[0, 'BMW'], [1, 'Benz'], [2, 'Porche'], [3, 'TOYOTA']]
 
 carBrands.sort();
 carBrands.reverse();

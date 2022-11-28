@@ -17,59 +17,7 @@
 
 <body>
 
-    <header class="header" id="header">
-        <div class="nav">
-            <!-- logo -->
-            <img src="img/male.png" alt="" class="nav__logo" />
-
-            <!-- menu -->
-            <nav class="nav__menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Home</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">About</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-
-        </div>
-    </header>
-
-    <script>
-
-        const header = document.querySelector("#header");
-        const nav = document.querySelector(".nav");
-        const navLogo = document.querySelector(".nav__logo");
-        const navList = document.querySelector(".nav__list");
-        const navLinks = document.querySelectorAll(".nav__link");
-
-        header.style.height = "3.5rem";
-        header.style.padding = "0 1rem";
-        header.style.boxShadow = "0 4px 8px rgba(0,0,0,0.1)";
-
-        nav.style.height = "100%";
-        nav.style.display = "flex";
-        nav.style.justifyContent = "space-between";
-        nav.style.alignItems = "center";
-
-        navLogo.style.width = "50px";
-        navLogo.style.borderRadius = "50%";
-
-        navList.style.display = "flex";
-        navList.style.columnGap = "1rem";
-        navList.style.listStyleType = "none";
-
-        navLinks.forEach(navLink => {
-            navLink.style.textDecoration = "none";
-            navLink.style.color = "#444"
-        });
-
-    </script>
+    <script src="scripts/third-session.js"></script>
 </body>
 
 </html>
