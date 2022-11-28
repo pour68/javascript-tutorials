@@ -15,10 +15,11 @@ if (balance > 1_000_000 && !hasCrime) {
   // not elgible for loan
 }
 
+// example 1: payment based on account type
+
 let price = 50_000;
 let accountType = "Golden";
 let off;
-
 switch (accountType) {
   case "Golden":
     off = 10_000;
@@ -36,34 +37,41 @@ switch (accountType) {
 
 const finalPrice = price - off;
 
-// let baseSalary;
-// let position = "Programer";
-// let overTime = 10;
-// let payPerHour = 25;
+// example 2: salary per position
 
-// switch (position) {
-//   case "CEO":
-//     baseSalary = 100_000;
-//     break;
-//   case "Manager":
-//     baseSalary = 50_000;
-//     break;
-//   case "Programer":
-//     baseSalary = 25_000;
-//     break;
-//   case "Employee":
-//     baseSalary = 10_000;
-//     break;
-//   default:
-//     baseSalary = 5_000;
-//     break;
-// }
+let baseSalary;
+let payPerHour;
+let overTime = 15;
+let position = "Programer";
+switch (position) {
+  case "CEO":
+    baseSalary = 100_000;
+    payPerHour = 50;
+    break;
+  case "Manager":
+    baseSalary = 50_000;
+    payPerHour = 35;
+    break;
+  case "Programer":
+    baseSalary = 25_000;
+    payPerHour = 25;
+    break;
+  case "Employee":
+    baseSalary = 5_000;
+    payPerHour = 10;
+    break;
+  default:
+    baseSalary = 1_000;
+    payPerHour = 5;
+    break;
+}
 
-// let finalPayment = baseSalary + overTime * payPerHour;
+let finalPayment = baseSalary + overTime * payPerHour;
 
-// let dice = 6;
+// example 3: move by dice
+
 // let movement;
-
+// let dice = 6;
 // switch (dice) {
 //   case 1:
 //     movement = 1;
@@ -80,27 +88,26 @@ const finalPrice = price - off;
 //   case 5:
 //     movement = 5;
 //     break;
-//   case 6:
-//     movement = 6;
-//     break;
 //   default:
+//     movement = 6;
 //     break;
 // }
 
 // loops
 
-// for (initializer; condition; iterator) {}
-
+// pattern: for (initializer; condition; iterator) {}
 // for (let i = 1; i <= 10; i++) {
 //   console.log(i);
 // }
 
+// pattern: initializer while(condition) { ... iterator }
 // let i = 1;
 // while (i <= 10) {
 //   console.log(i);
 //   i++;
 // }
 
+// pattern: initializer do { ... iterator } while(condition);
 // let i = 1;
 // do {
 //   console.log(i);
@@ -176,99 +183,102 @@ let statement = "Aria is a programmer.";
 statement.length;
 
 // methods
-// statement.toUpperCase();
-// statement.toLowerCase();
-// statement.replace("Aria", "Pouria"); // Pouria is a programmer.
-// statement.split(" "); // ["Aria", "is", "a", "programmer."]
-// statement.indexOf("is"); // 5
-// statement.substring(0, 7); // Aria is
-// statement.slice(8); // a programmer.
-// statement.concat(" and also a great person"); // Aria is a programmer. and also a great person
-// statement.includes("Aria"); // true
-// statement.startsWith("Aria"); // true
-// statement.endsWith("programmer."); // true
-// statement.search("is"); // 5
-// statement.charCodeAt(1);
+statement.toUpperCase();
+statement.toLowerCase();
+statement.replace("Aria", "Pouria"); // output: Pouria is a programmer.
+statement.split(" "); // output: ["Aria", "is", "a", "programmer."]
+statement.indexOf("is"); // output: 5
+statement.substring(0, 7); // output: Aria is
+statement.slice(8); // output: a programmer.
+statement.concat(" and also a great person"); // output: Aria is a programmer. and also a great person
+statement.includes("Aria"); // output: true
+statement.startsWith("Aria"); // output: true
+statement.endsWith("programmer."); // output: true
+statement.search("is"); // output: 5
+statement.charCodeAt(1);
 
-// let fullName = "   aria zamani    ";
-// fullName.trim(); // aria zamani
-// fullName.trimStart();
-// fullName.trimEnd();
+let fullName = "   aria zamani    ";
+fullName.trim(); // output: aria zamani
+fullName.trimStart();
+fullName.trimEnd();
 
 // array props and methods
-//                 0      1        2        3
+// index:          0      1        2         3
 let carBrands = ["BMW", "Benz", "Porche", "TOYOTA"];
 
 // get
-// carBrands[1];
+carBrands[1];
 
 // set
-// carBrands[2] = "KIA";
+carBrands[2] = "KIA";
 
-// for (let i = 0; i < carBrands.length; i++) {
-//   console.log(carBrands[i]);
-// }
+for (let i = 0; i < carBrands.length; i++) {
+  console.log(carBrands[i]);
+}
 
 // business class
-// carBrands.forEach((value) => console.log(value));
+carBrands.forEach((value) => console.log(value));
 
 // props
-carBrands.length; // 4
+const countOfBrand = carBrands.length; // output: 4
 
 // methods
-// carBrands.push("Ferrari");
-// carBrands.pop();
+// carBrands.push("Ferrari"); // output: ["BMW", "Benz", "Porche", "TOYOTA", "Ferrari"];
+// carBrands.pop(); // output: ["BMW", "Benz", "Porche"]
 
-// carBrands.unshift("Lamborgini");
-// carBrands.shift();
+// carBrands.unshift("Lamborgini"); // output: ["Lamborgini", "BMW", "Benz", "Porche", "TOYOTA"]
+// carBrands.shift(); // output: ["Benz", "Porche", "TOYOTA"]
 
-// const cars = carBrands.concat(["Alpha Romeo", "Hundai"]);
+// const cars = carBrands.concat(["Alfa Romeo", "Hundai"]);
 // output: ["BMW", "Benz", "Porche", "TOYOTA", "Alpha Romeo", "Hundai"]
 
-carBrands.indexOf("Porche");
-carBrands.join("-"); // BMW-Benz-Porche-TOYOTA
-const germanCars = carBrands.slice(0, 2); // ["BMW", "Benz"]
-const remainingCars = carBrands.splice(2, 1); // ["BMW", "Benz", "TOYOTA"];
+carBrands.indexOf("Porche"); // output: 2
+carBrands.join("-"); // output: BMW-Benz-Porche-TOYOTA
+const germanCars = carBrands.slice(0, 2); // output: ["BMW", "Benz"]
+const remainingCars = carBrands.splice(2, 1); // output: ["BMW", "Benz", "TOYOTA"];
 
-carBrands.includes("Benz"); // true
+carBrands.includes("Benz"); // output: true
 
-Array.from(carBrands.keys()); // [0, 1, 2, 3]
-Array.from(carBrands.values()); // ['BMW', 'Benz', 'Porche', 'TOYOTA']
-Array.from(carBrands.entries()); // [[0, 'BMW'], [1, 'Benz'], [2, 'Porche'], [3, 'TOYOTA']]
+Array.from(carBrands.keys()); // output: [0, 1, 2, 3]
+Array.from(carBrands.values()); // output: ['BMW', 'Benz', 'Porche', 'TOYOTA']
+Array.from(carBrands.entries()); // output: [[0, 'BMW'], [1, 'Benz'], [2, 'Porche'], [3, 'TOYOTA']]
 
 carBrands.sort();
 carBrands.reverse();
 
-// for (const value of carBrands) {
-//   console.log(value);
-// }
+for (const value of carBrands) {
+  console.log(value);
+}
 
-// for (const key in carBrands) {
-//   console.log(key);
-// }
+for (const key in carBrands) {
+  console.log(key);
+}
 
-let people = [
-  {
-    fullName: "Pouria Nayeb",
-    balance: 100_000,
-    isGraduated: true ? "graduate" : "not-graduate",
-  },
-  {
-    fullName: "Aria Zamani",
-    balance: 11_600,
-    isGraduated: false ? "graduate" : "not-graduate",
-  },
-  {
-    fullName: "Aria Khodarahmi",
-    balance: 50_000,
-    isGraduated: true ? "graduate" : "not-graduate",
-  },
+// example 1: list of mobile oses
+
+let mobileOSes = ["Andriod", "Ios"];
+
+for (const mobileOS of mobileOSes) {
+  // iterate through each mobile os
+}
+
+// example 2: list of genres
+
+let genres = [
+  { id: 1, title: "action" },
+  { id: 2, title: "adventure" },
+  { id: 3, title: "comedy" },
+  { id: 4, title: "horror" },
+  { id: 5, title: "musicals" },
+  { id: 6, title: "mystery" },
+  { id: 7, title: "romance" },
+  { id: 8, title: "science fiction" },
+  { id: 9, title: "sports" },
+  { id: 10, title: "thriller" },
+  { id: 11, title: "Western" },
+  { id: 12, title: "fanatsy" },
 ];
 
-for (const person of people) {
-  console.log(
-    person.fullName,
-    person.balance.toLocaleString("en-US"),
-    person.isGraduated
-  );
+for (const genre of genres) {
+  // iterate through each genre
 }

@@ -22,6 +22,7 @@ let peopleArray = [
 // peopleArray.forEach((person, index, array) =>
 //   console.log(person.fullName, index)
 // );
+// output: Pouria Nayeb 0 Aria Zamani 1 Aria Khodarahmi 2
 
 // let peopleBalances = peopleArray.map((person, index, array) => person.balance);
 // output: [100000, 17600, 75000]
@@ -29,28 +30,42 @@ let peopleArray = [
 // let peopleWithHighPayment = peopleArray.filter(
 //   (person, index, array) => person.balance > 50_000
 // );
+// output: [{ id: 1, fullName: "Pouria Nayeb", balance: 100_000, isGraduated: true}, { id: 3, fullName: "Aria Khodarahmi", balance: 75_000, isGraduated: true }]
+
 // let peopleWhoGraduate = peopleArray.filter((person) => person.isGraduated);
-// let peopleWithStartValueAria = peopleArray.filter((person) =>
+// output:  [{ id: 1, fullName: "Pouria Nayeb", balance: 100_000, isGraduated: true}, { id: 3, fullName: "Aria Khodarahmi", balance: 75_000, isGraduated: true }]
+
+// let peopleStartWithAria = peopleArray.filter((person) =>
 //   person.fullName.startsWith("Aria")
 // );
+// output:  [{ id: 2, fullName: "Aria Zamani", balance: 17_600, isGraduated: false }, { id: 3, fullName: "Aria Khodarahmi", balance: 75_000, isGraduated: true }]
 
 // let person = peopleArray.find((person) => person.id === 2);
+// output: { id: 2, fullName: "Aria Zamani", balance: 17_600, isGraduated: false }
 
 // let personIndex = peopleArray.findIndex((person) => person.id === 2);
+// output: 1
 
-// let peopleFullNames = peopleArray.map((person) => person.fullName); // ["", "", ""]
+// let peopleFullNames = peopleArray.map((person) => person.fullName);
+// output: ["Pouria Nayeb", "Aria Zamani", "Aria Khodarahmi"]
 // let isExistInPeopleArray = peopleFullNames.includes("Aria Khodarahmi");
+// output: true
 
 // let isAtLeastOneGraduated = peopleArray.some((person) => person.isGraduated);
+// output: true
+
 // let isAllGraduated = peopleArray.every((person) => person.isGraduated);
+// output: false
 
 // let fillPeople = peopleArray.fill("aria");
+// output: ["aria", "aria", "aria"]
 
 // let totalBalance = peopleArray.reduce((total, item) => item.balance + total, 0);
 // let totalBalanceFromRight = peopleArray.reduceRight(
 //   (total, item) => item.balance + total,
 //   0
 // );
+// output: 192600
 
 // const shoppingCart = [
 //   {
@@ -74,6 +89,7 @@ let peopleArray = [
 //   (total, item) => total + item.price * item.count,
 //   0
 // );
+// output: 19307100
 
 // object => json
 let employee = {
@@ -88,11 +104,15 @@ let employee = {
   },
 };
 
-// let employeeJSON = JSON.stringify(employee);
-let peopleJsonCollection = JSON.stringify(peopleArray);
+let employeeJSON = JSON.stringify(employee);
+// output: {"fullName":"pouria nayeb","baseSalary":25000,"overTime":10,"payPerHour":25,"gender":"male","birthDate":"1989-06-19T20:30:00.000Z"}
 
-// json => object
+let peopleJsonCollection = JSON.stringify(peopleArray);
+// output: [{"id":1,"fullName":"Pouria Nayeb","balance":100000,"isGraduated":true},{"id":2,"fullName":"Aria Zamani","balance":17600,"isGraduated":false},{"id":3,"fullName":"Aria Khodarahmi","balance":75000,"isGraduated":true}]
+
 let peopleCollection = JSON.parse(peopleJsonCollection);
+console.log(peopleCollection);
+// output: [{ "id": 1, "fullName": "Pouria Nayeb", "balance": 100000, "isGraduated": true }, { "id": 2, "fullName": "Aria Zamani", "balance": 17600, "isGraduated": false }, { "id": 3, "fullName": "Aria Khodarahmi", "balance": 75000, "isGraduated": true }]
 
 // storage
 

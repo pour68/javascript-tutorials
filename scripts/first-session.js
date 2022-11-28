@@ -173,9 +173,6 @@ class Human {
 const aria = new Human("aria zamani", "male", new Date(2001, 10, 5));
 const pouria = new Human("pouria nayeb", "male", new Date(1989, 5, 19));
 
-console.log(aria.getDetails());
-console.log(pouria.getDetails());
-
 class Book {
   constructor(title, isbn, author) {
     this.title = title;
@@ -193,5 +190,3 @@ let harryPotterBook = new Book(
   "9788893814560",
   "J. K. Rowling"
 );
-
-console.log(harryPotterBook.getDetails());
