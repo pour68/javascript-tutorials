@@ -61,7 +61,7 @@ let persianDate = currentDate.toLocaleString("fa-IR", options);
 
 currentDate.toLocaleDateString("fa-IR", options);
 
-// const timeOptions = { timeZone: "UTC", timeZoneName: "short" };
+const timeOptions = { timeZone: "UTC", timeZoneName: "short" };
 // const timeOptions = { hour12: true };
 // const timeOptions = { hour: "2-digit", minute: "2-digit", second: "2-digit" };
 

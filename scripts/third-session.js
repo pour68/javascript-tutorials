@@ -125,8 +125,8 @@ console.log(peopleCollection);
 
 // update
 // let employee1 = {
-//   fullName: "aria zamani",
-//   salary: 1_000,
+//   fullName: "shahab godarzi",
+//   salary: 25_000,
 //   overTime: 10,
 //   payPerHour: 25,
 //   gender: "male",
@@ -145,10 +145,10 @@ console.log(peopleCollection);
 // sessionStorage.setItem("people", peopleJsonCollection);
 
 // cookie
-// let fullName = "AriaZamani@gmail.com";
-// document.cookie = `email=${fullName}; expires=Thu, 18 Dec 2021 12:00:00 UTC; path=/`;
+// let email = "AriaZamani@gmail.com";
+// document.cookie = `email=${email}; expires=Thu, 18 Dec 2020 12:00:00 UTC; path=/`;
 
-// Math
+// Math object
 
 // props
 Math.PI;

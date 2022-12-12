@@ -4,7 +4,7 @@ const localSymbol = Symbol("localId");
 // props
 localSymbol.description;
 
-// // methods
+// methods
 localSymbol.toString();
 localSymbol.valueOf();
 
@@ -16,11 +16,11 @@ globalSymbol.valueOf();
 
 // Date
 
-const currentDate = new Date();
+const targetDate = new Date();
 
 // Function
 
-const minValue = (...array) => {
+const minValue = (array) => {
   let min = array[0];
 
   for (let i = 0; i < array.length; i++) {
@@ -32,7 +32,7 @@ const minValue = (...array) => {
   return min;
 };
 
-const maxValue = (...array) => {
+const maxValue = (array) => {
   let max = array[0];
 
   for (let i = 0; i < array.length; i++) {
@@ -72,6 +72,7 @@ function Person(firstName, lastName, nationalId) {
     nationalId,
   };
 }
+
 // const Aria = Person("aria", "zamani", "001025415855");
 
 // constructor function
@@ -80,6 +81,7 @@ function Employee(fullName, position, registerDate) {
   this.position = position;
   this.registerDate = registerDate;
 }
+
 const Aria = new Employee("aria zamani", "Consultant", new Date(2001, 10, 02));
 
 // Class
@@ -96,15 +98,15 @@ class PersianDate {
 // let pd = new PersianDate();
 // pd.get();
 
-// class PersianDate1 {
-//   constructor() {}
+class PersianDate1 {
+  constructor() {}
 
-//   static get() {
-//     let currentDate = new Date();
+  static get() {
+    let currentDate = new Date();
 
-//     return currentDate.toLocaleDateString("fa-IR");
-//   }
-// }
+    return currentDate.toLocaleDateString("fa-IR");
+  }
+}
 
 // let pd1 = PersianDate1.get();
 // console.log(pd1);
@@ -130,15 +132,16 @@ person.id = 35;
 // props
 Object.constructor;
 Object.prototype.fullName = "Pouria Nayeb";
+Object.prototype.eat = function () {};
 
 // methods
 let personKeys = Object.keys(person);
 let personValues = Object.values(person);
 
-const personMap = Object.entries(person);
+const personMap = Object.entries(person); // [[id, 1], [firstName, "Pouria"], ...]
 const personObject = Object.fromEntries([
-  ["id", 1],
-  ["firstName", "Pouria"],
+  ["address", "Iran, tehran, ..."],
+  ["nationalId", "0011052963"],
 ]);
 
 let personObj = Object.create(person);
@@ -148,14 +151,14 @@ const bookTarget = { title: "Harry Potter", genre: "Fantasy" };
 const bookAuthor = { author: "J. K. Rowling" };
 const bookISBN = { ISBN: "9780747532743" };
 
-const book = Object.assign(bookTarget, bookAuthor, bookISBN);
+const book = Object.assign(bookTarget, bookAuthor, bookISBN); // {}
 
 Object.defineProperty(person, "birthdate", {
   value: new Date(1989, 06, 19),
 });
 
 Object.defineProperties(person, {
-  isMale: {
+  gender: {
     value: true,
     writable: false,
   },
