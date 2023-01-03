@@ -20,7 +20,7 @@ ECMAScript is a standard specification for a scripting language.
 
 JavaScript is a general-purpose scripting language that conforms to the ECMAScript specification. The ECMAScript specification is a blueprint for creating a scripting language. JavaScript is an implementation of that blueprint. On the whole, JavaScript implements the ECMAScript specification as described in ECMA-262.
 
-## application types you can build with JavaScript
+## Application types you can build with JavaScript
 
 website - web app. - server app. - games - real-time networking app. - desktop/mobile/smartwatch app. - IoT - AI - command-line tools
 
@@ -80,6 +80,17 @@ js - scripts
 ## Variables
 
 - var, let and const keywords
+- declare multiple variables
+
+---
+
+## Difference between var and let
+
+- variable defined by var/let keyword hoisted to the top but just var keyword variables can be initialized
+example:
+OK   : hasBf = true; var hasBf;
+Wrong: hasBf = true; let hasBf;
+- var is function-level but let is block-level variable.
 
 ---
 
@@ -466,6 +477,8 @@ constructor - prototype
 
 ## Object
 
+object is a collection of key/value pairs.
+
 let person = { firstName: "", lastName: "", ... };
 
 ---
@@ -516,6 +529,8 @@ Object.toString():
 ---
 
 ## Array
+
+array is index-based collection of data.
 
 const fruits = ["apple", "pineapple", "grapes", "orange", "cherry"];
 
@@ -600,7 +615,9 @@ reduceRight(): Reduce the values of an array to a single value (going right-to-l
 
 ---
 
-## Json
+## JSON
+
+json is a type of document that can be used for settings and transfering data over the network.
 
 - serialize
 - deserialize
@@ -608,6 +625,8 @@ reduceRight(): Reduce the values of an array to a single value (going right-to-l
 ---
 
 ## Function
+
+function is a block of JavaScript code, that can be executed when invoked.
 
 const square = (width) => width * width;
 

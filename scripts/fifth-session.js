@@ -1,7 +1,9 @@
-// BOM
+// BOM (Browser object model)
+// browser window
 let browserWidth = window.innerWidth; // 668
 let browserHeight = window.innerHeight; // 584
 
+// monitor screen
 let deviceScreenWidth = screen.width; // 1366
 let deviceScreenHeight = screen.height; // 768
 let deviceAvailableWidth = screen.availWidth; // 1366
@@ -10,11 +12,12 @@ let deviceOrientation = screen.orientation; // {angle: 0, type: 'landscape-prima
 let devicePixelDepth = screen.pixelDepth; // 24 bit
 let deviceColorDepth = screen.colorDepth; // 24 bit
 
+// url
 let currentURL = location.href; // http://127.0.0.1:5500/index.html
 let hostName = location.hostname; // 127.0.0.1:5500
 let urlPath = location.pathname; // /index.html
 let protocol = location.protocol; // http:
-let port = location.port; // 5500
+let port = location.port; // 443
 // location.assign("https://google.com");
 
 // history.back();
@@ -24,8 +27,8 @@ let port = location.port; // 5500
 // confirm("Are you sure");
 // prompt("your name", "pouria");
 
-let isCookieEnable = navigator.cookieEnabled; //
-let deviceOS = navigator.platform; //
+let isCookieEnable = navigator.cookieEnabled; // true
+let deviceOS = navigator.platform; // win32
 let browserLanguage = navigator.language; // en-US
 let isBrowserOnline = navigator.onLine; // true
 
@@ -44,8 +47,6 @@ document.body;
 document.forms;
 document.links;
 document.images;
-
-console.log(document.images);
 
 // old
 const demoDiv = document.getElementById("demo");
