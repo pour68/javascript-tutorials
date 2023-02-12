@@ -28,8 +28,6 @@ website - web app. - server app. - games - real-time networking app. - desktop/m
 
 V8 - SpiderMonkey - JavaScriptCore - Chakra(obsolete)
 
----
-
 ## Requirements
 
 Advance text editor(VSCode - Atom - Sublime text - ...) - Web Browser (Chrome - Firefox - Edge - Opera - ...)
@@ -46,21 +44,13 @@ Prettier - IntelliCode - JavaScript (ES6) code snippets - ESLint
 
 js - scripts
 
----
-
 ## Programming case types(case styles|convention name)
 
-- __kebab case__: first-name - last-name - ...
-- __camel case__: firstName - lastName - ...
-- __snake case__: first_name - last_name - ...
-- __pascal case__: FirstName - LastName - ...
-- __macro case__: FIRST_NAME - LAST_NAME - ...
-- __train case__: First-Name - Last-Name - ...
-- __cobol case__: FIRST-NAME - LAST-NAME - ...
-- __flatcase__: firstname - lastname - ...
-- __hungarian notation__: strName - bIsMale - ...
-
----
+- **kebab case**: first-name - last-name - ...
+- **camel case**: firstName - lastName - ...
+- **snake case**: first_name - last_name - ...
+- **pascal case**: FirstName - LastName - ...
+- **hungarian notation**: strName - bIsMale - ...
 
 ## Different ways to reference JavaScript in HTML document
 
@@ -68,31 +58,23 @@ js - scripts
 - internal
 - external
 
----
-
 ## Comment
 
 - single line
 - multiline
-
----
 
 ## Variables
 
 - var, let and const keywords
 - declare multiple variables
 
----
-
 ## Difference between var and let
 
 - variable defined by var/let keyword hoisted to the top but just var keyword variables can be initialized
-example:
-OK   : hasBf = true; var hasBf;
-Wrong: hasBf = true; let hasBf;
+  example:
+  OK : hasBf = true; var hasBf;
+  Wrong: hasBf = true; let hasBf;
 - var is function-level but let is block-level variable.
-
----
 
 ## DataTypes
 
@@ -104,13 +86,9 @@ string - number - boolean - undefined - null - date - symbol
 
 object - array - function - class
 
----
-
 ## Output by console
 
 console.log()
-
----
 
 ## String object shaped
 
@@ -119,15 +97,11 @@ name.valueOf();
 
 const name = "Pouria";
 
----
-
 ## String properties
 
 - length: Returns the length of a string
 - constructor: Returns the string's constructor function
 - prototype: Allows you to add properties and methods to an object
-
----
 
 ## String methods
 
@@ -174,14 +148,10 @@ const name = "Pouria";
 
 - valueOf(): Returns the primitive value of a string or a string object
 
----
-
 ### Template string
 
 let language = "English";
 let phrase = `${language} is the best.`;
-
----
 
 ## Number
 
@@ -193,14 +163,10 @@ let weight = 62.5;
 
 let scientificNotation = 1.2e5;
 
----
-
 ## Number object shaped
 
 const userId = new Number(10);
 userId.valueOf();
-
----
 
 ## Number properties
 
@@ -211,8 +177,6 @@ userId.valueOf();
 - NEGATIVE_INFINITY: Represents negative infinity (returned on overflow)
 - NaN: Represents a "Not-a-Number" value
 - POSITIVE_INFINITY: Represents infinity (returned on overflow)
-
----
 
 ## Number methods
 
@@ -227,14 +191,10 @@ userId.valueOf();
 - toString(): Converts a number to a string
 - valueOf(): Returns the primitive value of a number
 
----
-
 ## Boolean
 
 let isMale = true;
 let isApproved = false;
-
----
 
 ## Boolean object shaped
 
@@ -243,21 +203,15 @@ name.valueOf();
 
 const name = true;
 
----
-
 ## Boolean properties
 
 - constructor: Returns the function that created JavaScript's Boolean prototype
 - prototype: Allows you to add properties and methods to an object
 
----
-
 ## Boolean methods
 
 - toString(): Converts a number to a string
 - valueOf(): Returns the primitive value of a boolean
-
----
 
 ## Type conversion
 
@@ -268,16 +222,12 @@ const name = true;
 - Boolean(): Returns a boolean, converted from its argument
 - String(): Returns a string, converted from its argument
 
----
-
 ## null vs undefined
 
 null is an empty or non-existent value.
 null must be assigned.
 
 undefined: typically means a variable has been declared, but not defined
-
----
 
 ## Output
 
@@ -308,8 +258,6 @@ undefined: typically means a variable has been declared, but not defined
 - table(object|array): display object and array in tabular format
 - trace(): outputs a stack trace
 
----
-
 ## operators
 
 - arithmetic
@@ -319,15 +267,11 @@ undefined: typically means a variable has been declared, but not defined
 - bitwise
 - type checking
 
----
-
 ## Make decision statement
 
 - if else
 - ternary
 - switch case
-
----
 
 ## Math Properties
 
@@ -339,8 +283,6 @@ undefined: typically means a variable has been declared, but not defined
 - Math.LOG10E: Returns the base-10 logarithm of E (approx. 0.434)
 - Math.LOG2E: Returns the base-2 logarithm of E (approx. 1.442)
 - Math.SQRT1_2: Returns the square root of 1/2 (approx. 0.707)
-
----
 
 ## Math methods
 
@@ -378,14 +320,10 @@ undefined: typically means a variable has been declared, but not defined
 - tanh(x): Returns the hyperbolic tangent of a number
 - trunc(x): Returns the integer part of a number (x)
 
----
-
 ## Symbol
 
 const localSymbol = Symbol();
 const globalSymbol = Symbol.for(description);
-
----
 
 ## Symbol properties
 
@@ -408,13 +346,9 @@ Symbol.search
 Symbol.caller
 Symbol.unscopables
 
----
-
 ## Symbol methods
 
 Symbol.for(description) - Symbol.keyFor(global symbol)
-
----
 
 ## Date object
 
@@ -439,13 +373,9 @@ const targetDate = new Date("October 13, 2014 11:13:00");
 
 const msec = Date.parse("March 21, 2012");
 
----
-
 ## Date properties
 
 constructor - prototype
-
----
 
 ## Date methods
 
@@ -473,36 +403,41 @@ constructor - prototype
 - setSeconds(): Set the seconds (0-59)
 - setTime(): Set the time (milliseconds since January 1, 1970)
 
----
-
 ## Object
+
+### object definition
 
 object is a collection of key/value pairs.
 
-let person = { firstName: "", lastName: "", ... };
+examples: let person = { firstName: "", lastName: "", ... };
 
----
+### 6 ways to create object in javascript
 
-## Object constructor(constructor function)
+- object literal
+- object constructor
+- factory function
+- constructor function
+- object static method create
+- class
 
-function Person(firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
-  ...
-}
+### how to check if prop exits in an object
 
-Person.prototype.nationality = "Iranian";
+if(fullname in [object]) {}
 
----
+### object's props get/set
 
-## Object properties
-
+get:
 person.firstName
 person["firstName"]
 
----
+set:
+person.firstName = "";
 
-## Object methods
+### object destructuring
+
+### object's props
+
+### object's methods
 
 Object.keys(object):
 Object.values(object):
@@ -526,7 +461,18 @@ Object.freeze(object):
 Object.isFrozen(object):
 Object.toString():
 
----
+### how to manage object's props configs
+
+### object crud operations
+
+- create
+- read
+- update
+- delete
+
+### why object?
+
+by the help of object data-type you can store data just like a record in a database.
 
 ## Array
 
@@ -534,49 +480,41 @@ array is index-based collection of data.
 
 const fruits = ["apple", "pineapple", "grapes", "orange", "cherry"];
 
----
+### 2 ways to create array in javascript
 
-## Array object shaped
-
-const fruitsObj = new Array("apple", "pineapple", "grapes", "orange", "cherry");
-
----
-
-## Array properties
+### array's props
 
 length: Sets or returns the number of elements in an array
 constructor: Returns the function that created the Array object's prototype
 prototype: Allows you to add properties and methods to an Array object
 
----
+### array's methods
 
-## Array methods
-
-### CRUD
+#### CRUD
 
 push(): Adds new elements to the end of an array, and returns the new length
 pop(): Removes the last element of an array, and returns that element
 shift(): Removes the first element of an array, and returns that element
 unshift(): Adds new elements to the beginning of an array, and returns the new length
 
-### sorting
+#### sorting
 
 sort(): Sorts the elements of an array
 reverse(): Reverses the order of the elements in an array
 
-### cut and join
+#### cut and join
 
 slice(): Selects a part of an array, and returns the new array
 splice(): Adds/Removes elements from an array
 concat(): Joins arrays and returns an array with the joined arrays
 join(): Joins all elements of an array into a string
 
-### search by index
+#### search by index
 
 indexOf(): Search the array for an element and returns its position
 lastIndexOf(): Search the array for an element, starting at the end, and returns its position
 
-### others
+#### others
 
 entries(): Returns a key/value pair Array Iteration Object
 keys(): Returns a Array Iteration Object, containing the keys of the original array
@@ -585,8 +523,6 @@ from(): Creates an array from an object
 copyWithin(): Copies array elements within the array, to and from specified positions
 toString(): Converts an array to a string, and returns the result
 valueOf(): Returns the primitive value of an array
-
----
 
 ### High order array methods
 
@@ -602,7 +538,15 @@ fill(): Fill the elements in an array with a static value
 reduce(): Reduce the values of an array to a single value (going left-to-right)
 reduceRight(): Reduce the values of an array to a single value (going right-to-left)
 
----
+### array's of different data-types
+
+- array of strings
+- array of numbers
+- array of objects
+
+### why array?
+
+array data-type is just like database to store data, but combination of array and object is prefect example of data in database.
 
 ## Loops
 
@@ -613,8 +557,6 @@ reduceRight(): Reduce the values of an array to a single value (going right-to-l
 - for of
 - forEach
 
----
-
 ## JSON
 
 json is a type of document that can be used for settings and transfering data over the network.
@@ -622,15 +564,11 @@ json is a type of document that can be used for settings and transfering data ov
 - serialize
 - deserialize
 
----
-
 ## Function
 
 function is a block of JavaScript code, that can be executed when invoked.
 
-const square = (width) => width * width;
-
----
+const square = (width) => width \* width;
 
 ## Function types
 
@@ -643,14 +581,10 @@ const square = (width) => width * width;
 - constructor
 - generator
 
----
-
 ## Function properties
 
 length: number of parameters
 prototype: return object
-
----
 
 ## Function methods
 
@@ -659,34 +593,28 @@ call() - apply() - bind()
 call: With the call() method, you can write a method that can be used on different objects.
 bind: function borrowing
 
----
-
 ## function closure
 
 A closure is a function having access to the parent scope, even after the parent function has closed.
 
 const add = (function () {
-  let counter = 0;
-  return function () {counter += 1; return counter;}
+let counter = 0;
+return function () {counter += 1; return counter;}
 })();
-
----
 
 ## Set
 
 A JavaScript Set is a collection of unique values.
 
+### How to create a set
+
 let set = new Set([1,2,2,3]);
 
----
-
-## Set properties
+### Set's props
 
 size: Returns the number elements in a Set
 
----
-
-## Set methods
+### Set's methods
 
 new Set(): Creates a new Set
 add(): Adds a new element to the Set
@@ -698,23 +626,19 @@ values(): Returns an Iterator with all the values in a Set
 keys(): Same as values()
 entries(): Returns an Iterator with the [value,value] pairs from a Set
 
----
-
 ## Map
 
 A Map holds key-value pairs where the keys can be any datatype, a Map remembers the original insertion order of the keys.
 
+### How to create a map
+
 let map = new Map([["apples", 500], ... ]);
 
----
-
-## Map properties
+### Map's props
 
 size: Returns the number of Map elements
 
----
-
-## Map methods
+### Map's methods
 
 new Map(): Creates a new Map object
 set(): Sets the value for a key in a Map
@@ -726,8 +650,6 @@ forEach(): Invokes a callback for each key/value pair in a Map
 entries(): Returns an iterator object with the [key, value] pairs in a Map
 keys(): Returns an iterator object with the keys in a Map
 values(): Returns an iterator object of the values in a Map
-
----
 
 ## Class
 
@@ -742,11 +664,7 @@ class is blueprint of an object.
 - get
 - set
 
----
-
 ## DOM
-
----
 
 ## BOM
 
@@ -809,29 +727,17 @@ window.prompt(msg, initialValue);
 setTimeout(callback, time);
 setInterval(callback, time);
 
----
-
 ## Cookie
 
 document.cookie = "username=John Smith; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
 
----
-
 ## Local Storage
-
----
 
 ## Fetch (get - post - put - delete)
 
----
-
 ## NodeJS
 
----
-
 ## RegEx
-
----
 
 ## Miscellaneous
 
